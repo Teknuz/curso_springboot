@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.informaticonfig.spring.app1.springboot_applications.Empleados;
+
 @Controller
 public class EjemploController {
     
@@ -11,9 +13,10 @@ public class EjemploController {
 
     
     public String info(Model model){
-        model.addAttribute("Titulo","Servidor en Linea");
-        model.addAttribute("Servidor","Informaticonfig");
-        model.addAttribute("Ip","192.93.94.167");
+      Empleados empleado1 = new Empleados("Jose","Gomez","Ypacarai","Desarrollador",22, 986202684, 001 ); 
+
+        model.addAttribute("Empleado", empleado1);
+       
         return "detalles_info";
 
     }
