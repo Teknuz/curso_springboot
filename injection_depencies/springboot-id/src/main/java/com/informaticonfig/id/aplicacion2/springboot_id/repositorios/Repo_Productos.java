@@ -6,7 +6,7 @@ import com.informaticonfig.id.aplicacion2.springboot_id.models.Productos;
 
 
 
-public class Repo_Productos {
+public class Repo_Productos implements Cloneable{
     //Creacion de lista
     List<Productos> datos;
 
@@ -28,4 +28,7 @@ public List<Productos> findAll(){
         .equals(idProducto)) //
         .findFirst().orElseThrow();//Obtiene el primer elemento y luego manda una excepcion en caso de que no se encuentre
     }
+
+
+    
 }

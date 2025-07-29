@@ -40,4 +40,13 @@ public void setPrecio(int precio) {
 //Metodos getters y setters
 
 
+    @Override
+   public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            
+            return new Productos(idProducto, nombre, precio);
+        }
+    }
 }
