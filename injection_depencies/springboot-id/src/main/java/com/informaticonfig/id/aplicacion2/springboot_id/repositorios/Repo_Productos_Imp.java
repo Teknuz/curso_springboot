@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import com.informaticonfig.id.aplicacion2.springboot_id.models.Productos;
 
 
-@Component
+@Repository
 public class Repo_Productos_Imp implements ProductoRepositorio{
     //Creacion de lista
     List<Productos> datos;
